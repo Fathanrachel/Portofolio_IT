@@ -1,196 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>MY Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fathan — Full Stack Developer</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/png" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
-
 <body>
-    <div class="navbar" id="homesection">
-        <h2>FTHN-</h2>
-        <ul>
-            <li><a href="#" id="home">Home</a></li>
-            <li><a href="#" id="skill">Skills</a></li>
-            <li><a href="#" id="portofolio">Portfolio</a></li>
-            <li><a href="#" id="contact">Contact</a></li>
-            <li><a href="#" id="about">About</a></li>
+  <header class="navbar" id="nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand-text">FTHN-</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <ul class="nav-menu">
+        <li><a href="#homesection">Home</a></li>
+        <li><a href="#aboutmesection">About</a></li>
+        <li><a href="#portofoliosection">Portfolio</a></li>
+        <li><a href="#skillsection">Skills</a></li>
+        <li><a href="#contactsection">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class='bx bx-moon'></i></button>
+      <button class="btn icon-btn" id="hamburger" aria-label="Open menu"><i class='bx bx-menu'></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class='bx bx-x'></i></button>
+    <ul class="drawer-menu">
+      <li><a href="#homesection">Home</a></li>
+      <li><a href="#aboutmesection">About</a></li>
+      <li><a href="#portofoliosection">Portfolio</a></li>
+      <li><a href="#skillsection">Skills</a></li>
+      <li><a href="#contactsection">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="main hero" id="homesection">
+      <div class="hero-left">
+        <h1 class="reveal">Hi, I am <span>Muhammad Rachel Fathan Idzhany</span> 👋</h1>
+        <p class="lead reveal">Call me <strong>Fathan</strong> — Full Stack Developer who builds modern, maintainable, and accessible web apps.</p>
+        <div class="hero-cta reveal">
+          <a class="btn primary" href="#portofoliosection">See my work</a>
+          <a class="btn ghost" href="/assets/CV/CV_ATS_Muhammad Rachel Fathan Idzhany.pdf" download>Download CV</a>
+        </div>
+
+        <ul class="meta-cards reveal" aria-hidden="true">
+          <li class="card">
+            <div class="card-left"><i class='bx bx-briefcase'></i></div>
+            <div class="card-right"><h4>1</h4><p>Years Experience</p></div>
+          </li>
+          <li class="card">
+            <div class="card-left"><i class='bx bx-check-circle'></i></div>
+            <div class="card-right"><h4>14</h4><p>Projects</p></div>
+          </li>
+          <li class="card">
+            <div class="card-left"><i class='bx bx-smile'></i></div>
+            <div class="card-right"><h4>3</h4><p>Happy Clients</p></div>
+          </li>
         </ul>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="profile-glass">
+          <img src="/assets/Foto_sy2.jpg" alt="Fathan profile" class="profile" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="aboutmesection">
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <img src="/assets/Foto_sy.jpg" alt="Profile" class="about-photo reveal" loading="lazy" />
+        <div class="about-text reveal">
+          <h3>About Me</h3>
+          <p>Halo! Saya Muhammad Rachel Fathan Idzhany, mahasiswa Teknik Informatika yang berfokus pada Full Stack Development. Saya memiliki pengalaman dalam membangun aplikasi web dengan pendekatan yang berorientasi pada pengguna, mulai dari perancangan antarmuka hingga pengembangan sistem backend yang stabil dan terukur.</p>
+          <p>Saya percaya bahwa teknologi harus memberikan dampak dan solusi nyata. Karena itu, saya selalu berusaha menghadirkan produk digital yang efisien, modern, mudah digunakan, dan mampu menjawab kebutuhan pengguna dengan optimal.</p>
+
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-marker"></div>
+                    <div class="tl-content">
+                        <span class="tl-year">2024-2025</span>
+                        <h4>Internship Experience</h4>
+                        <p>Magang di PT. Astra Graphia Information Technology</p>
+                        <span class="tl-role">Divisi Application Development Service</span>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-marker"></div>
+                    <div class="tl-content">
+                        <span class="tl-year">2025</span>
+                        <h4>Internship Experience</h4>
+                        <p>Boothcamp di PT.VINIX SEVEN AURUM</p>
+                        <span class="tl-role"> Divisi Web Development UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portofoliosection">
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="portfolio-controls reveal">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+        </div>
+        <input type="search" id="searchProject" placeholder="Search project..." aria-label="Search projects" />
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <article class="project-card" data-type="fullstack">
+            <img src="assets/rentalmobil.png" alt="Sistem Rental Mobil" loading="lazy" />
+            <div class="project-body">
+            <h3>Sistem Rental Mobil</h3>
+            <p class="muted">Sistem manajemen penyewaan mobil dengan fitur CRUD & autentikasi.</p>
+            <div class="project-actions">
+                <button class="btn small outline view-btn"
+                data-title="Sistem Rental Mobil"
+                data-desc="Website pengelolaan penyewaan mobil berbasis CRUD dan sistem login."
+                data-img="assets/rentalmobil.png">
+                Preview
+                </button>
+                <a class="btn small" href="https://github.com/Fathanrachel/PBO_PenyewaanMobil.git" target="_blank">Code</a>
+            </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-type="frontend">
+            <img src="assets/moviebes.png" alt="Project Website Moviebes" loading="lazy" />
+            <div class="project-body">
+            <h3>MovieBes - Website Portal Film</h3>
+            <p class="muted">Website katalog film dengan fitur pencarian & filter.</p>
+            <div class="project-actions">
+                <button class="btn small outline view-btn"
+                data-title="MovieBes"
+                data-desc="Website informasi film dengan desain UI modern."
+                data-img="assets/moviebes.png">
+                Preview
+                </button>
+                <a class="btn small" href="https://github.com/Fathanrachel/Project_website_Moviebes.git" target="_blank">Code</a>
+            </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-type="frontend">
+            <img src="assets/worklist.png" alt="Work List" loading="lazy" />
+            <div class="project-body">
+            <h3>Work-List App</h3>
+            <p class="muted">Aplikasi to-do untuk mengelola pekerjaan harian.</p>
+            <div class="project-actions">
+                <button class="btn small outline view-btn"
+                data-title="Work-List App"
+                data-desc="Task manager sederhana dengan fitur add, delete, dan complete."
+                data-img="assets/worklist.png">
+                Preview
+                </button>
+                <a class="btn small" href="https://github.com/Fathanrachel/WORK-LIST.git" target="_blank">Code</a>
+            </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-type="frontend">
+            <img src="assets/gameweb.png" alt="Game Website" loading="lazy" />
+            <div class="project-body">
+            <h3>Game Website</h3>
+            <p class="muted">Simple web game interaktif berbasis JS.</p>
+            <div class="project-actions">
+                <button class="btn small outline view-btn"
+                data-title="Game Website"
+                data-desc="Game berbasis web dengan gameplay sederhana dan UI fun."
+                data-img="assets/gameweb.png">
+                Preview
+                </button>
+                <a class="btn small" href="https://github.com/Fathanrachel/Game_Website.git" target="_blank">Code</a>
+            </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-type="fullstack">
+            <img src="assets/library.png" alt="Website Perpustakaan" loading="lazy" />
+            <div class="project-body">
+            <h3>Website Perpustakaan</h3>
+            <p class="muted">Sistem pendataan buku & manajemen peminjaman.</p>
+            <div class="project-actions">
+                <button class="btn small outline view-btn"
+                data-title="Website Perpustakaan"
+                data-desc="Library management system dengan database penyimpanan data buku."
+                data-img="assets/library.png">
+                Preview
+                </button>
+                <a class="btn small" href="https://github.com/Fathanrachel/pbw-perpustakaan.git" target="_blank">Code</a>
+            </div>
+            </div>
+        </article>
+
+
+        <!-- ===============================
+                NOTE: Tambah project baru di sini
+                Copy satu block <article> di atas lalu sesuaikan
+            ================================= -->
+        <!-- Example template for future project:
+        <article class="project-card" data-type="frontend">
+            <img src="assets/namaimage.png" alt="Project Title" loading="lazy" />
+            <div class="project-body">
+            <h3>Project Name</h3>
+            <p class="muted">Short description here.</p>
+            <div class="project-actions">
+                <button class="btn small outline view-btn"
+                data-title="Project Name"
+                data-desc="Full description here"
+                data-img="assets/namaimage.png">Preview</button>
+                <a class="btn small" href="#" target="_blank">Code</a>
+            </div>
+            </div>
+        </article>
+        -->
+
+        </div>
+
+    </section>
+
+    <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Close preview"><i class='bx bx-x'></i></button>
+        <div class="modal-body">
+          <img src="" alt="Project preview" id="modalImg" />
+          <div class="modal-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+            <a id="modalCode" class="btn" href="#" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="main">
-        <h4>Hi, I Am <span>Muhammad Rachel Fathan Idzhany</span> 👋</h4>
-        <h4>Call Me <span>Fathan</span> </h4>
-        <p class="title">Front End Web Developer</p>
-        <p class="subtitle">I'm Design Code!</p>
-        <img src="assets/almet (bg putih).png">
+    <section class="section skills" id="skillsection">
+      <h2 class="section-title">My Skills</h2>
+
+      <div class="skills-grid reveal">
+        <div class="skill">
+          <div class="skill-head"><span>HTML/CSS</span><span>90%</span></div>
+          <div class="progress"><div class="bar" style="--w:90%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>JavaScript</span><span>85%</span></div>
+          <div class="progress"><div class="bar" style="--w:85%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Node / PHP</span><span>75%</span></div>
+          <div class="progress"><div class="bar" style="--w:75%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Database</span><span>80%</span></div>
+          <div class="progress"><div class="bar" style="--w:80%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contactsection">
+        <h2 class="section-title">Lets Build Something Great Together</h2>
+        <p class="section-subtitle">
+            Interested in collaborating or discussing a project? I`d love to hear from you.
+        </p>
+        <p id="formStatus" class="form-status"></p>
+
+
+        <div class="contact-container reveal">
+            <div class="contact-card">
+            <form class="contact-form" id="contactForm">
+                <div class="input-group">
+                <input type="text" id="name" name="name" placeholder=" " required />
+                <label for="name">Your Name</label>
+                </div>
+
+                <div class="input-group">
+                <input type="email" id="email" name="email" placeholder=" " required />
+                <label for="email">Email Address</label>
+                </div>
+
+                <div class="input-group textarea">
+                <textarea id="message" name="message" placeholder=" " rows="5" required></textarea>
+                <label for="message">Your Message</label>
+                </div>
+
+                <button type="submit" class="btn primary w-100">
+                Send Message
+                </button>
+            </form>
+            </div>
+
+            <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Prefer email? Feel free to reach me directly at:</p>
+
+            <a class="email-link" href="mailto:your.email@example.com">
+                your.email@example.com
+            </a>
+
+            <div class="socials">
+                <a href="https://github.com/Fathanrachel" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-rachel-fathan-idzhany-3095592a5/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/rachelfathan_/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            </div>
+
+            <a href="https://wa.me/6281273424186" class="btn ghost w-100" target="_blank">
+                <i class='bx bxl-whatsapp'></i> Chat via WhatsApp
+            </a>
+            </div>
+        </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="f-left">
+        <h4>Fathan.</h4>
+        <p>Full Stack Developer</p>
+      </div>
+      <div class="f-right">
+        <p>© <span id="year"></span> Muhammad Rachel Fathan Idzhany — Built with ♥</p>
+      </div>
     </div>
+  </footer>
 
-    <div class="guarantee">
-        <div class="item">
-            <div class="icon">
-                <i class='bx bx-check-shield'></i>
-            </div>
-            <div class="info">
-                <h3>1</h3>
-                <p>Years Of Experiences</p>
-            </div>
-            <i class='bx bx-chevron-right'></i>
-        </div>
-        <div class="item">
-            <div class="icon">
-                <i class='bx bx-check-circle'></i>
-            </div>
-            <div class="info">
-                <h3>14</h3>
-                <p>Completed Projects</p>
-            </div>
-            <i class='bx bx-chevron-right'></i>
-        </div>
-        <div class="item">
-            <div class="icon">
-                <i class='bx bx-laugh'></i>
-            </div>
-            <div class="info">
-                <h3>3</h3>
-                <p>Happy Clients</p>
-            </div>
-            <i class='bx bx-chevron-right'></i>
-        </div>
-    </div>
-
-    <h5 class="seprator" id="aboutmesection">Who I Am</h5>
-
-    <div class="about">
-        <img src="assets/foto.jpg">
-        <div class="info">
-            <h3>About Me</h3>
-            <p>Halo! Saya Muhammad Rachel Fathan Idzhany, mahasiswa semester empat Teknik Informatika di Universitas Pancasila. Saya memiliki passion dalam pengembangan front-end, dengan keahlian dalam HTML, CSS, JavaScript, C++, C, SQL databse, java, python serta framework seperti Bootstrap.
-            </p>
-            <p>Selama studi, saya telah mengerjakan berbagai proyek, mulai dari situs deskripsi film hingga sistem manajemen rental mobil, baik secara mandiri maupun dalam tim. Proyek-proyek ini telah membantu saya mengembangkan keterampilan teknis dan pemahaman.</p>
-            <p>Sebagai Mahasiswa Teknik Informatika, saya ikut mengorganisir seminar, serta menjadi mentor bagi mahasiswa baru dalam event mencari ide inovatif dan juga kreatif.</p>
-            <p>Saya selalu bersemangat untuk belajar dan mengikuti tren terbaru dalam front-end development, dengan tujuan terus meningkatkan keterampilan dan berkontribusi pada proyek-proyek inovatif yang meningkatkan pengalaman pengguna di web.</p>
-        </div>
-    </div>
-
-    <h5 class="seprator" id="portofoliosection">My Portofolio</h5>
-    
-    <div class="porto">
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/150" alt="Image 1">
-            <div class="description">This is image 1</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/150" alt="Image 2">
-            <div class="description">This is image 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/150" alt="Image 3">
-            <div class="description">This is image 3</div>
-        </div>
-    </div>
-
-
-    <h5 class="seprator" id="skillsection">My Skills</h5>
-
-    <div class="skills">
-        <div class="left">
-            <div class="info">
-                <h3>What My Programming Skills Included?</h3>
-                <p>
-                    I develop simple, intuitive and responsive user interface that helps users get things done with less
-                    effort and time with those technologies.
-                </p>
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="item">
-                <i class='bx bxl-html5' title="HTML"></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-css3' title="CSS"></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-javascript' title="JavaScript"></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-github' title="Github"></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-git' title="Git"></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-bootstrap' title="Bootstrap"></i>
-            </div>
-           <div class="item">
-                <i class='bx bxl-c-plus-plus' title="C++"></i>
-           </div>
-           <div class="item">
-                <i class='bx bxl-java' title="java"></i>
-           </div>
-           <div class="item">
-                <i class='bx bxl-php' title="PHP"></i>
-           </div>
-           <div class="item">
-                <i class='bx bxl-tailwind-css' title="Tailwind"></i>
-           </div>
-        </div>
-
-    </div>
-
-
-    <!-- Footer Start -->
-    <footer>
-
-        <div class="cols">
-            <div class="about-col">
-                <h3>Fathan.</h3>
-                <p>Front End Developer</p>
-            </div>
-
-            <div class="links-col">
-                <h4>Useful Links</h4>
-                <a href="#" id="footer-home">Home</a>
-                <a href="#" id="footer-about">About</a>
-                <a href="#" id="footer-skill">Skills</a>
-                <a href="#" id="footer-portofolio">Portfolio</a>
-                <a href="#" id="footer-contact">Contact</a>
-            </div>
-
-            <div class="links-col" id="contactsection">
-                <h4>Social Media</h4>
-                <a href="https://www.instagram.com/rachelfathan_/" target="_blank">Instagram</a>
-                <a href="https://www.linkedin.com/in/fathan-undefined-3095592a5/" target="_blank">Linkedin</a>
-                <a href="https://github.com/Fathanrachel"target="_blank">Github</a>
-                <a href="https://wa.me/6281273424186" target="_blank">WhatsApp</a>
-
-            </div>
-
-            <div class="news-col">
-                <h4>NewsLetter</h4>
-                <p>Enter your email and get notified about news, of.</p>
-
-                <form>
-                    <input type="email" placeholder="Your email address">
-                    <button><i class='bx bxl-telegram'></i></button>
-                </form>
-
-            </div>
-
-        </div>
-
-    </footer>
-    <!-- footer End -->
-
-
-
-
-    <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
-
 </html>
